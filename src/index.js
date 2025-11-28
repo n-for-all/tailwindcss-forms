@@ -46,37 +46,23 @@ const forms = plugin.withOptions(function (options = { strategy: undefined }) {
         class: ['.form-input', '.form-textarea', '.form-select', '.form-multiselect'],
         styles: {
           appearance: 'none',
-          'background-color': '#fff',
-          'border-color': resolveColor(
-            theme('colors.gray.500', colors.gray[500]),
-            '--tw-border-opacity'
-          ),
           'border-width': borderWidth['DEFAULT'],
+          'border-style': 'solid',
           'border-radius': borderRadius.none,
           'padding-top': spacing[2],
           'padding-right': spacing[3],
           'padding-bottom': spacing[2],
           'padding-left': spacing[3],
-          'font-size': baseFontSize,
           'line-height': baseLineHeight,
           '--tw-shadow': '0 0 #0000',
           '&:focus': {
-            outline: '2px solid transparent',
-            'outline-offset': '2px',
+            outline: '1px solid transparent',
+            'outline-offset': '1px',
             '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
             '--tw-ring-offset-width': '0px',
-            '--tw-ring-offset-color': '#fff',
-            '--tw-ring-color': resolveColor(
-              theme('colors.blue.600', colors.blue[600]),
-              '--tw-ring-opacity'
-            ),
             '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
             '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
             'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
-            'border-color': resolveColor(
-              theme('colors.blue.600', colors.blue[600]),
-              '--tw-border-opacity'
-            ),
           },
         },
       },
@@ -84,7 +70,6 @@ const forms = plugin.withOptions(function (options = { strategy: undefined }) {
         base: ['input::placeholder', 'textarea::placeholder'],
         class: ['.form-input::placeholder', '.form-textarea::placeholder'],
         styles: {
-          color: resolveColor(theme('colors.gray.500', colors.gray[500]), '--tw-text-opacity'),
           opacity: '1',
         },
       },
@@ -201,12 +186,6 @@ const forms = plugin.withOptions(function (options = { strategy: undefined }) {
           'flex-shrink': '0',
           height: spacing[4],
           width: spacing[4],
-          color: resolveColor(theme('colors.blue.600', colors.blue[600]), '--tw-text-opacity'),
-          'background-color': '#fff',
-          'border-color': resolveColor(
-            theme('colors.gray.500', colors.gray[500]),
-            '--tw-border-opacity'
-          ),
           'border-width': borderWidth['DEFAULT'],
           '--tw-shadow': '0 0 #0000',
         },
@@ -229,17 +208,13 @@ const forms = plugin.withOptions(function (options = { strategy: undefined }) {
         base: [`[type='checkbox']:focus`, `[type='radio']:focus`],
         class: ['.form-checkbox:focus', '.form-radio:focus'],
         styles: {
-          outline: '2px solid transparent',
-          'outline-offset': '2px',
+          outline: '1px solid transparent',
+          'outline-offset': '1px',
           '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
-          '--tw-ring-offset-width': '2px',
+          '--tw-ring-offset-width': '1px',
           '--tw-ring-offset-color': '#fff',
-          '--tw-ring-color': resolveColor(
-            theme('colors.blue.600', colors.blue[600]),
-            '--tw-ring-opacity'
-          ),
           '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
-          '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
+          '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
           'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
         },
       },
